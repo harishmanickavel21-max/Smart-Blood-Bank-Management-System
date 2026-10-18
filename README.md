@@ -19,7 +19,6 @@ The project demonstrates how structures, arrays, and circular queues can be used
 - Stock Transactions: Record changes in blood inventory.
 - Menu-Driven Interface: Access available operations through a text-based menu.
 
-Note: Features should be enabled in the final code before they are described as fully implemented.
 
 #Technologies Used
 
@@ -38,7 +37,7 @@ Smart-Blood-Bank-Management-System/
 ├── smart_blood_bank_management_system.c
 └── README.md
 
-Additional files, such as a project report, test cases, screenshots, or sample output, can be added as the project develops.
+
 
 #Testing
 
@@ -53,7 +52,6 @@ Test the application using scenarios such as:
 7. Testing queue behavior when it becomes full or empty.
 8. Checking invalid menu choices and unavailable stock.
 
-Record the actual results of each test before reporting it as passed.
 
 # Project Scope and Limitations
 
