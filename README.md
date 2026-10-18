@@ -30,49 +30,8 @@ Arrays| Storing records in memory
 Circular Queue| Managing queued requests
 GCC Compiler| Compiling the source code
 
-# Getting Started
 
-Prerequisites
-
-- A C compiler such as GCC
-- A terminal or command prompt
-- Git (optional, for cloning the repository)
-
-1. Clone the repository
-
-git clone https://github.com/harishmanickavel21-max/Smart-Blood-Bank-Management-System.git
-
-2. Open the project directory
-
-cd Smart-Blood-Bank-Management-System
-
-3. Compile the program
-
-gcc smart_blood_bank_management_system.c -o blood_bank
-
-4. Run the program
-
-Linux / macOS / Linux-based terminals:
-
-./blood_bank
-
-Windows Command Prompt:
-
-blood_bank.exe
-
-If compilation fails, check the source filename and the compiler error messages.
-
-🧠 Concepts Demonstrated
-
-- Structures and user-defined data types
-- Arrays and record management
-- Menu-driven programming
-- Conditional statements and loops
-- Queue operations and circular queue logic
-- Inventory updates and request processing
-- Basic validation of donor donation history
-
-📂 Project Structure
+#Project Structure
 
 Smart-Blood-Bank-Management-System/
 │
