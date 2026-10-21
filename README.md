@@ -1,76 +1,40 @@
-# Smart Blood Bank Management System
+# Smart Blood Bank Management System — Web + C integration
 
-A menu-driven blood bank management application developed in C programming to demonstrate donor management, donation history, blood inventory management, and hospital blood request processing using fundamental data structures.
+## How it works
+- `blood_bank_backend.c` is the persistent C process and owns the stock, donors, queue, and hospital-request arrays in RAM.
+- `server.py` is a small Python 3 HTTP bridge using only the Python standard library. It sends commands to that C process.
+- `index.html`, `styles.css`, and `app.js` are the dashboard. Buttons call `/api/action`; state is re-read from the C process.
+- The original classroom C source is not overwritten. This integration backend is a separate file because the interactive `scanf()` menu cannot also serve browser requests directly.
 
-# Project Overview
+## Windows laptop
+1. Put this folder on your laptop.
+2. Install Python 3 and a C compiler (`gcc`, e.g. MinGW-w64/MSYS2). Ensure both are on PATH.
+3. Double-click `start_windows.bat`.
+4. Open `http://127.0.0.1:8000` in your browser.
 
-The Smart Blood Bank Management System is an academic C programming project designed to organize basic blood bank operations through a simple, menu-driven interface.
+## Linux/macOS laptop
+1. Ensure Python 3 and a C compiler are installed.
+2. In a terminal, enter this folder and run `./start_linux_mac.sh`.
+3. Open `http://127.0.0.1:8000`.
 
-The project demonstrates how structures, arrays, and circular queues can be used to manage donor information, track donation records, maintain blood stock, and process blood requests.
+## Android phone
+Recommended: run the backend on a laptop, then open it on Android while both devices use the same trusted Wi-Fi.
+1. Start the server on the laptop.
+2. Find the laptop's LAN IPv4 address (`ipconfig` on Windows; `ip addr` on Linux; Network settings on macOS).
+3. On Android Chrome, open `http://LAPTOP-IP:8000` (replace `LAPTOP-IP`, e.g. `192.168.1.20`). Allow Python through the laptop firewall on private networks if prompted. Do not use a public Wi-Fi network.
 
-#Key Features
+To run directly on Android, use a terminal app such as Termux, install Python and clang, compile `blood_bank_backend.c` with `clang -std=c11 -O2 blood_bank_backend.c -o blood_bank_backend`, then run `python server.py` in the same folder. Copy the whole project folder to the phone first. Depending on Android version and app restrictions, keeping the local server alive in the background may require keeping Termux open.
 
-- Donor Management: Store and manage donor details.
-- Donation History: Maintain records of previous blood donations.
-- Donation Frequency Checks: Help prevent donations from being recorded too frequently, according to the implemented eligibility rules.
-- Blood Inventory: Track blood stock by blood group.
-- Hospital Requests: Manage requests for blood from hospitals.
-- Request Queue: Use a circular queue to organize pending requests.
-- Stock Transactions: Record changes in blood inventory.
-- Menu-Driven Interface: Access available operations through a text-based menu.
+## Test flow
+1. Click **Load Demo** to load fictional sample records in C memory.
+2. Add a donor and refresh; it should appear in the donor table.
+3. Enqueue an ADD or ISSUE transaction; stock changes and the transaction appears in the FIFO queue.
+4. Click **Dequeue next**; the queue shrinks, but stock is not changed a second time.
+5. Create a hospital request, then click **Fulfil**. It only succeeds if there is enough stock and queue space.
+6. Click **Reset** to restore initial stock `{10, 5, 8, 4, 6, 3, 12, 5}` and clear records.
 
-
-#Technologies Used
-
-Technology| Purpose
-C Programming| Application logic
-Structures| Organizing donor and request records
-Arrays| Storing records in memory
-Circular Queue| Managing queued requests
-GCC Compiler| Compiling the source code
-
-
-#Project Structure
-
-Smart-Blood-Bank-Management-System/
-│
-├── smart_blood_bank_management_system.c
-└── README.md
-
-
-
-#Testing
-
-Test the application using scenarios such as:
-
-1. Adding a new donor.
-2. Viewing donor records.
-3. Recording a donation.
-4. Checking donation history and eligibility.
-5. Viewing blood stock for different blood groups.
-6. Adding and processing hospital requests.
-7. Testing queue behavior when it becomes full or empty.
-8. Checking invalid menu choices and unavailable stock.
-
-
-# Project Scope and Limitations
-
-This project demonstrates basic blood bank management concepts for educational purposes. It is not a certified hospital blood bank system and should not be used to make real clinical decisions.
-
-A production system would require secure persistent storage, authentication, privacy controls, medically validated donor eligibility rules, blood component compatibility checks, traceability, and appropriate clinical oversight.
-
-# Future Enhancements
-
-- Persistent storage using files or a database
-- Search and filtering of donor records
-- Improved reports for donation history and inventory
-- Blood request prioritization
-- Automated inventory and request summaries
-- A graphical dashboard or web interface
-
-# Author
-
-Harish M
-
-Student project — C Programming and Data Structures
-
+## Important limitations
+- Data is in RAM and is cleared when the server/backend restarts. Persistence to a file/database is not included yet.
+- This is an educational prototype using fictional demo stock. Do not use it for real patient care or operational blood-bank decisions. Donor interval logic is only a classroom rule; qualified staff must determine actual eligibility.
+- The page uses Tailwind, Font Awesome, and Google Fonts CDNs, so those visual assets need internet access; the core dashboard/backend connection runs locally.
+- Bind address is `0.0.0.0` so a phone on the same Wi-Fi can connect. Use only a trusted private network; this prototype has no login/authentication and must not be exposed to the public internet.
