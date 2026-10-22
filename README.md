@@ -22,19 +22,25 @@ Objectives
 - Demonstrate real-time retrieval of the current backend state.
 
 Key Features:
-Donor Management
+Donor Management:
      Register donors and maintain donor records required by the application.
-Donation History
+     
+Donation History:
      Record donation events and check the configured 90-day interval before accepting another donation from the same donor.
-Blood Inventory Management
+     
+Blood Inventory Management:
      Track blood stock and demonstrate stock updates when blood units are added or issued.
-Hospital Blood Requests
+     
+Hospital Blood Requests:
      Create hospital requests, track their fulfilment status, and update inventory when requests are fulfilled.
-Circular Queue Processing
+     
+Circular Queue Processing:
      Use a circular queue to demonstrate structured transaction processing.
-Interactive Web Dashboard
+     
+Interactive Web Dashboard:
      Access the system through a browser-based interface built with HTML, CSS, and JavaScript.
-Backend Integration
+     
+Backend Integration:
      Use a Python HTTP server to connect dashboard actions to the C backend and exchange application state in JSON format.
 
 Technology Stack
