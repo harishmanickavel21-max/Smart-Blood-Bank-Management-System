@@ -2,17 +2,14 @@ Smart Blood Bank Management System
 
 A C-Based Blood Bank Management Application with Web Dashboard Integration
 
-Project Overview
+Project Overview:
+       The Smart Blood Bank Management System is an academic software project that demonstrates how fundamental C programming concepts and data structures can be applied to blood bank operations. The project combines a C-based management backend with a browser-based dashboard, connected through a lightweight Python HTTP server.
+      
+      The application provides a practical demonstration of donor management, donation history, blood inventory updates, hospital blood requests, request fulfilment, and backend state monitoring. It also demonstrates communication between a frontend interface and a C backend using HTTP requests and JSON data.
+      This project is developed for educational purposes and demonstrates programming logic, data structures, and basic client-server integration.
 
-The Smart Blood Bank Management System is an academic software project that demonstrates how fundamental C programming concepts and data structures can be applied to blood bank operations. The project combines a C-based management backend with a browser-based dashboard, connected through a lightweight Python HTTP server.
-
-The application provides a practical demonstration of donor management, donation history, blood inventory updates, hospital blood requests, request fulfilment, and backend state monitoring. It also demonstrates communication between a frontend interface and a C backend using HTTP requests and JSON data.
-
-This project is developed for educational purposes and demonstrates programming logic, data structures, and basic client-server integration.
-
-Problem Statement
-
-Managing donor records, donation history, available blood stock, and hospital requests requires organized data handling and consistent transaction processing. This project explores how these operations can be represented in a software application using C programming, data structures, and a web-based interface.
+Problem Statement:
+        Managing donor records, donation history, available blood stock, and hospital requests requires organized data handling and consistent transaction processing. This project explores how these operations can be represented in a software application using C programming, data structures, and a web-based interface.
 
 Objectives
 
@@ -24,35 +21,21 @@ Objectives
 - Integrate a C backend with a browser-based dashboard through Python.
 - Demonstrate real-time retrieval of the current backend state.
 
-Key Features
-
+Key Features:
 Donor Management
-
-Register donors and maintain donor records required by the application.
-
+     Register donors and maintain donor records required by the application.
 Donation History
-
-Record donation events and check the configured 90-day interval before accepting another donation from the same donor.
-
+     Record donation events and check the configured 90-day interval before accepting another donation from the same donor.
 Blood Inventory Management
-
-Track blood stock and demonstrate stock updates when blood units are added or issued.
-
+     Track blood stock and demonstrate stock updates when blood units are added or issued.
 Hospital Blood Requests
-
-Create hospital requests, track their fulfilment status, and update inventory when requests are fulfilled.
-
+     Create hospital requests, track their fulfilment status, and update inventory when requests are fulfilled.
 Circular Queue Processing
-
-Use a circular queue to demonstrate structured transaction processing.
-
+     Use a circular queue to demonstrate structured transaction processing.
 Interactive Web Dashboard
-
-Access the system through a browser-based interface built with HTML, CSS, and JavaScript.
-
+     Access the system through a browser-based interface built with HTML, CSS, and JavaScript.
 Backend Integration
-
-Use a Python HTTP server to connect dashboard actions to the C backend and exchange application state in JSON format.
+     Use a Python HTTP server to connect dashboard actions to the C backend and exchange application state in JSON format.
 
 Technology Stack
 
@@ -186,38 +169,6 @@ The following functional checks have been completed:
 
 These checks demonstrate the core workflows of the application. They represent manual functional testing rather than a complete automated test suite.
 
-Limitations
-
-- Temporary data storage: Application state is held in memory and may be lost when the backend restarts.
-- Local development server: The server is intended for local demonstrations, not public production deployment.
-- Simplified eligibility rule: The 90-day interval is a programming demonstration and does not determine actual medical eligibility.
-- Security limitations: The prototype does not provide a complete production-grade authentication, authorization, or privacy framework.
-- Testing scope: Manual verification does not guarantee that every possible error condition has been covered.
-
-This project is an educational prototype, not a clinical system. Use fictional information during demonstrations and do not use the application to make real medical or blood-allocation decisions.
-
-Future Enhancements
-
-- Persistent storage using a database.
-- Secure login and role-based access control.
-- Improved input validation and error handling.
-- Automated unit and integration tests.
-- Transaction history and audit logging.
-- Enhanced reporting and inventory analytics.
-- Secure deployment with appropriate privacy controls.
-
-Academic Relevance
-
-This project demonstrates the practical application of:
-
-- C structures and arrays.
-- Circular queue operations.
-- Conditional logic and data validation.
-- Record and inventory management.
-- HTTP-based client-server communication.
-- JSON data exchange.
-- Integration of a C backend with a browser-based user interface.
-
 Conclusion
 
 The Smart Blood Bank Management System demonstrates how fundamental programming concepts can be combined with a web dashboard to build an interactive management application. By integrating C, Python, and frontend technologies, the project provides practical experience in data structures, application logic, backend communication, and software testing.
@@ -225,8 +176,6 @@ The Smart Blood Bank Management System demonstrates how fundamental programming 
 The project serves as a foundation for further development into a more persistent, secure, and feature-rich management application.
 
 Author
+Presidency University
 
-Harish Manickavel
-
-GitHub Repository: https://github.com/harishmanickavel21-max/Smart-Blood-Bank-Management-System
 
