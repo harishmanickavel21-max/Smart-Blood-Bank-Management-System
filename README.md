@@ -4,9 +4,10 @@ A C-Based Blood Bank Management Application with Web Dashboard Integration
 
 Project Overview:
        The Smart Blood Bank Management System is an academic software project that demonstrates how fundamental C programming concepts and data structures can be applied to blood bank operations. The project combines a C-based management backend with a browser-based dashboard, connected through a lightweight Python HTTP server.
-      
-      The application provides a practical demonstration of donor management, donation history, blood inventory updates, hospital blood requests, request fulfilment, and backend state monitoring. It also demonstrates communication between a frontend interface and a C backend using HTTP requests and JSON data.
-      This project is developed for educational purposes and demonstrates programming logic, data structures, and basic client-server integration.
+
+The application provides a practical demonstration of donor management, donation history, blood inventory updates, hospital blood requests, request fulfilment, and backend state monitoring. It also demonstrates communication between a frontend interface and a C backend using HTTP requests and JSON data. 
+
+This project is developed for educational purposes and demonstrates programming logic, data structures, and basic client-server integration.
 
 Problem Statement:
         Managing donor records, donation history, available blood stock, and hospital requests requires organized data handling and consistent transaction processing. This project explores how these operations can be represented in a software application using C programming, data structures, and a web-based interface.
@@ -182,6 +183,9 @@ The Smart Blood Bank Management System demonstrates how fundamental programming 
 The project serves as a foundation for further development into a more persistent, secure, and feature-rich management application.
 
 Author
+
+HARISH M
+
 Presidency University
 
 
